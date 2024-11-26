@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en" theme="rogers" data-critters-container>
+ <head>
+  <meta charset="utf-8">
+  <meta property="og:image" content="https://www.rogers.com/app/prod/assets/i/og-image.png"><base href="/">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>/*
+      Build info:
+      U2FsdGVkX19YnEWrq3NU/Pm9McZ3DUxCc0fd/yd1wzA2ofBkR0+aonKOQdmIIk5DQqcmJolcTvGoafj78+NV9VSFFlOq+N5S47wpyVJo68I0POwoLLj24fB8o5AlFh6S/9QseV79fgPNY84b51qX6w8vG4lrHPNTVPnKGcTOL/GFj+LVsjCCgQn6CCKNi+0vTPHjwhShz9MvqXo8cxRxBBi8e9pe/cnN6ma03UF9GdxHeIA2vJWDZxu3BuX54jEWQ+YgvokEs0SRzcwshUT8XPuwiWKYdAXJwN2jYrT7qY5RBhzYXXQjjGFb/u1gvWto7Ft+qhYKtx/ahwUelXH2FqFpWC7waag14tq8MsL/GoNS2IKxZB6WdV54lt50+5g0
+      */
+      body,
+      html {
+        height: 100%;
+      }
+
+      body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        :focus-visible {
+          outline: none;
+        }
+      }
+
+      #divAppLoading,
+      #divPageLoading,
+      #divPageLoadingBackdrop {
+        position: fixed;
+        z-index: 9999999;
+      }
+
+      #divAppLoading,
+      #divPageLoading,
+      #divPageLoadingBackdrop {
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      #divAppLoading,
+      #divPageLoadingBackdrop {
+        background-color: #fff;
+      }
+
+      #divPageLoading {
+        display: none;
+        background-color: transparent;
+      }
+
+      h1.text-title-1,
+      h1.text-boy {
+        margin-top: 30px;
+      }</style>
+  <link rel="icon" type="image/x-icon" href="https://www.rogers.com/app/prod/assets/i/favicon.ico">
+  <meta name="msvalidate.01" content="95BFE19A540031E4B1589E50AE275536">
+  <meta name="apple-itunes-app" content="app-id=337618972">
+  <script>function getCookie(name) {
+        let cookieArray = document.cookie.split(';'); // Split the cookie string into an array
+        for (let i = 0; i < cookieArray.length; i++) {
+          let cookiePair = cookieArray[i].split('='); // Split each individual cookie into a name and value pair
+          if (name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+          }
+        }
+        // Return null if not found
+        return null;
+      }
+
+      function onLoad() {
+        if (getCookie('language') === 'fr') {
+          document.querySelector('#divAppLoading img').setAttribute('alt', 'Chargement...');
+        }
+      }</script>
+  <script defer src="/rbrw/runtime.ee29f3a729780ee6.js"></script>
+  <script defer src="/rbrw/main.e915bf0d7826bc7c.js"></script>
+  <script defer src="/rbrw/polyfills.06e7e5a400502f9a.js"></script>
+  <script defer src="/rbrw/scripts.a304dc9f60ef896b.js"></script>
+  <style>@charset "UTF-8";html{box-sizing:border-box;-ms-overflow-style:scrollbar}html,body{height:100%}*,*:before,*:after{box-sizing:inherit}*{padding:0;margin:0}a{text-decoration:none}@font-face{font-family:Ted Next Var;src:url(https://assets.rogers-assets.com/v3/fonts/TedNextVar-Regular.woff2?v=3.24.0) format("woff2 supports variations");src:url(https://assets.rogers-assets.com/v3/fonts/TedNextVar-Regular.woff2?v=3.24.0) format("woff2 supports variations"),url(https://assets.rogers-assets.com/v3/fonts/TedNextVar-Regular.woff2?v=3.24.0) format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap}@font-face{font-family:Ted Next Var;src:url(https://assets.rogers-assets.com/v3/fonts/TedNextVar-Italic.woff2?v=3.24.0) format("woff2 supports variations");src:url(https://assets.rogers-assets.com/v3/fonts/TedNextVar-Italic.woff2?v=3.24.0) format("woff2 supports variations"),url(https://assets.rogers-assets.com/v3/fonts/TedNextVar-Italic.woff2?v=3.24.0) format("woff2-variations");font-weight:100 900;font-style:italic;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Light.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Light.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-Light.ttf?v=3.24.0) format("truetype");font-weight:100;font-style:normal;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-LightItalic.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-LightItalic.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-LightItalic.ttf?v=3.24.0) format("truetype");font-weight:100;font-style:italic;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Regular.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Regular.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-Regular.ttf?v=3.24.0) format("truetype");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Italic.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Italic.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-Italic.ttf?v=3.24.0) format("truetype");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Medium.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Medium.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-Medium.ttf?v=3.24.0) format("truetype");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-SemiBold.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-SemiBold.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-SemiBold.ttf?v=3.24.0) format("truetype");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-SemiBoldItalic.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-SemiBoldItalic.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-SemiBoldItalic.ttf?v=3.24.0) format("truetype");font-weight:600;font-style:italic;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-DemiBold.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-DemiBold.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-DemiBold.ttf?v=3.24.0) format("truetype");font-weight:650;font-style:normal;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-DemiBoldItalic.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-DemiBoldItalic.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-DemiBoldItalic.ttf?v=3.24.0) format("truetype");font-weight:650;font-style:italic;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Bold.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-Bold.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-Bold.ttf?v=3.24.0) format("truetype");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:Ted Next;src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-BoldItalic.woff2?v=3.24.0) format("woff2");src:url(https://assets.rogers-assets.com/v3/fonts/TedNext-BoldItalic.woff2?v=3.24.0) format("woff2"),url(https://assets.rogers-assets.com/v3/fonts/TedNext-BoldItalic.ttf?v=3.24.0) format("truetype");font-weight:700;font-style:italic;font-display:swap}*{font-family:Ted Next,sans-serif}@supports (font-variation-settings: normal){*{font-family:Ted Next Var,sans-serif}}html{font-size:62.5%}body{font-size:1.6rem;color:#1f1f1f}p{font-size:var(--ds-body-r-font-size, initial);text-transform:var(--ds-body-r-text-transform, initial);line-height:var(--ds-body-r-line-height, initial);letter-spacing:var(--ds-body-r-letter-spacing, initial);font-weight:var(--ds-body-r-font-weight, initial);margin-bottom:1.6rem;margin-bottom:0}ul{padding-left:24px;margin-bottom:0}ul li{font-size:var(--ds-body-r-font-size, initial);text-transform:var(--ds-body-r-text-transform, initial);line-height:var(--ds-body-r-line-height, initial);letter-spacing:var(--ds-body-r-letter-spacing, initial);font-weight:var(--ds-body-r-font-weight, initial);margin-bottom:1.6rem;margin-bottom:8px;padding-left:16px}ul li:last-child{margin-bottom:0}a{color:var(--ds-txt-interactive-link);text-decoration:underline;-webkit-tap-highlight-color:transparent}a:hover,a:focus{text-decoration-thickness:3px}a:focus{outline:none;box-shadow:0 0 0 2px var(--ds-br-interactive-default),0 0 0 5px var(--ds-focus)}* h1,*.text-title-1{font-size:var(--ds-title-1-font-size, initial);text-transform:var(--ds-title-1-text-transform, initial);letter-spacing:var(--ds-title-1-letter-spacing, initial);line-height:var(--ds-title-1-line-height, initial);font-weight:var(--ds-title-1-font-weight, initial);margin-bottom:3.2rem}@media (min-width: 900px){* h1,*.text-title-1{font-size:var(--ds-title-1-font-size-tablet, initial)}}@media (min-width: 1200px){* h1,*.text-title-1{font-size:var(--ds-title-1-font-size-desktop, initial)}}@media (min-width: 900px){* h1,*.text-title-1{margin-bottom:4rem}}* h2{font-size:var(--ds-title-2-font-size, initial);text-transform:var(--ds-title-2-text-transform, initial);letter-spacing:var(--ds-title-2-letter-spacing, initial);line-height:var(--ds-title-2-line-height, initial);font-weight:var(--ds-title-2-font-weight, initial);margin-bottom:1.6rem}@media (min-width: 900px){* h2{font-size:var(--ds-title-2-font-size-tablet, initial)}}@media (min-width: 1200px){* h2{font-size:var(--ds-title-2-font-size-desktop, initial)}}@media (min-width: 900px){* h2{margin-bottom:2.4rem}}*.text-bold{font-weight:700!important}*.text-semi{font-weight:600!important}*.text-default{font-weight:500!important}[mode=light]{color:var(--ds-txt-body-default)}.rds-icon-left:before{content:"\e907"}.rds-icon-chevron-down:before{content:"\e904"}.rds-icon-wireless:before{content:"\e90f"}.rds-icon-home-phone:before{content:"\e910"}.rds-icon-tv:before{content:"\e912"}.rds-icon-home:before{content:"\e914"}.rds-icon-laptop:before{content:"\e913"}.position-relative{position:relative!important}.position-fixed{position:fixed!important}.left-0{left:0!important}.top-0{top:0!important}.d-none{display:none!important}.d-inline-block{display:inline-block!important}.d-flex{display:flex!important}.d-inline-flex{display:inline-flex!important}@media (min-width: 900px){.d-md-none{display:none!important}.d-md-inline{display:inline!important}.d-md-block{display:block!important}}.m-0{margin:0!important}.m-auto{margin:auto!important}.mt-0{margin-top:0!important}@media (min-width: 900px){.mt-md-0{margin-top:0!important}}.mb-0{margin-bottom:0!important}.mb-12{margin-bottom:12px!important}.mb-16{margin-bottom:16px!important}.mb-40{margin-bottom:40px!important}@media (min-width: 900px){.mb-md-24{margin-bottom:24px!important}}.w-100{width:100%!important}.mw-100{max-width:100%!important}.mw-content{max-width:728px!important}.minw-100{min-width:100%!important}.min-vw-100{min-width:100vw!important}.min-vh-100{min-height:100vh!important}.p-0{padding:0!important}.pt-0{padding-top:0!important}@media (min-width: 900px){.pt-md-0{padding-top:0!important}}.pb-0{padding-bottom:0!important}.pb-12{padding-bottom:12px!important}.pb-24{padding-bottom:24px!important}@media (min-width: 900px){.pb-md-0{padding-bottom:0!important}}.pl-24{padding-left:24px!important}.px-4{padding-left:4px!important;padding-right:4px!important}.py-12{padding-top:12px!important;padding-bottom:12px!important}.full-screen{position:absolute!important;inset:0!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.outline-none:focus{outline:none}.ds-pointer{cursor:pointer}.ds-shadow{box-shadow:0 1px 2px #1f1f1f33}.ds-no-overflow{overflow:hidden}[mode=light]{--ds-overlay-color:0, 0, 0;--ds-overlay-reverse-color:255, 255, 255}.list-none{list-style-type:none;padding-left:0}.list-none li{padding-left:0}.container{width:100%;padding-right:24px;padding-left:24px;margin-right:auto;margin-left:auto}@media (min-width: 1200px){.container{max-width:1200px}}.row{display:flex;flex-wrap:wrap;margin-right:-12px;margin-left:-12px}.flex-column{flex-direction:column!important}.justify-content-center{justify-content:center!important}.align-items-center{align-items:center!important}@media (min-width: 900px){.flex-md-row{flex-direction:row!important}.align-items-md-center{align-items:center!important}}.text-center{text-align:center!important}.text-no-decoration{text-decoration:none;text-decoration-thickness:auto!important}.text-nowrap{white-space:nowrap!important}.ds-border-bottom{border-style:solid;border-color:var(--ds-br-body-default)!important;border-width:0px;border-bottom-width:1px}.b-4{border-width:4px!important}.bb-1{border-bottom-width:1px!important}.bradius-round{border-radius:50%!important}.b-solid{border-style:solid}*.hover\:text-underline:hover{text-decoration:underline}*.focus\:no-shadow:focus{box-shadow:none}.ds-brcolor-concrete{border-color:#ccc!important}.ds-progress-spinner{--spinner-animation-duration:1s;--spinner-icon-animation-duration:5s;transition:all .1s linear;opacity:1;transform:scale(1)}.ds-progress-spinner__vanity-svg{animation:spinner-rotate var(--spinner-animation-duration) linear infinite}.ds-progress-spinner__vanity-svg .background{stroke-dasharray:150;stroke-dashoffset:0;transform-origin:center;stroke:var(--ds-br-interactive-highlight)}.ds-progress-spinner__vanity-svg .line{stroke:var(--ds-bg-body-default)}.ds-progress-spinner ds-icon{transform:scale(0) translateZ(0)}.ds-progress-spinner ds-icon .ds-icon{color:var(--ds-icon-interactive-highlight)}.ds-progress-spinner ds-icon:nth-of-type(1){animation:spinner-loadIcons var(--spinner-icon-animation-duration) infinite ease-in-out}.ds-progress-spinner ds-icon:nth-of-type(2){animation:spinner-loadIcons var(--spinner-icon-animation-duration) 1s infinite ease-in-out}.ds-progress-spinner ds-icon:nth-of-type(3){animation:spinner-loadIcons var(--spinner-icon-animation-duration) 2s infinite ease-in-out}.ds-progress-spinner ds-icon:nth-of-type(4){animation:spinner-loadIcons var(--spinner-icon-animation-duration) 3s infinite ease-in-out}.ds-progress-spinner ds-icon:nth-of-type(5){animation:spinner-loadIcons var(--spinner-icon-animation-duration) 4s infinite ease-in-out}.ds-progress-spinner.variant-vanity{z-index:1100}.ds-progress-spinner.variant-vanity.bg-semi-transparent{background:rgba(var(--ds-overlay-reverse-color),.8)}.ds-progress-spinner.variant-vanity .ds-progress-spinner__container{width:80px;height:80px;border-color:var(--ds-bg-body-default)}@keyframes spinner-loadIcons{0%{transform:scale(0) translateZ(0)}8%{transform:scale(1) translateZ(0)}16%{transform:scale(1) translateZ(0)}24%{transform:scale(0) translateZ(0)}}@keyframes spinner-rotate{to{transform:rotate(360deg)}}.cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}.ds-button.-secondary:disabled{pointer-events:none;color:var(--ds-txt-interactive-disabled)!important;border-color:var(--ds-br-interactive-disabled)!important;background-color:var(--ds-bg-interactive-disabled)!important}@media (hover: hover) and (pointer: fine){.ds-button:hover{outline:none;text-decoration:none;box-shadow:none}.ds-button:hover:not(.-icon):not([disabled]) .ds-button__copy{text-decoration:underline}.ds-button:hover.-secondary{background-color:var(--ds-bg-interactive-neutral-default);border-color:var(--ds-br-interactive-highlight-hover);color:var(--ds-txt-interactive-highlight-hover)}}.ds-button{height:48px;border:1px solid transparent;background-color:transparent;transition:all .1s linear;padding:0 16px}.ds-button::-moz-focus-inner{border:0}.ds-button:focus{outline:none;text-decoration:none;box-shadow:none}.ds-button__wrapper{height:100%;width:100%}.ds-button__copy{text-overflow:ellipsis}.ds-button ds-icon{margin-left:4px}.ds-button.-secondary{background:var(--ds-bg-interactive-neutral-default);border-color:var(--ds-br-interactive-highlight);color:var(--ds-txt-interactive-highlight)}.ds-button.-secondary:active{background-color:var(--ds-bg-interactive-neutral-default);border-color:var(--ds-br-interactive-highlight-hover);color:var(--ds-txt-interactive-highlight-hover)}.ds-button.-secondary:active{box-shadow:inset 4px 4px 4px #0000004d}@media (hover: hover) and (pointer: fine){.ds-link:hover{text-decoration:none;outline:none;box-shadow:none}.ds-link:hover .ds-link__copy{text-decoration:underline}.ds-link:hover.-cta .ds-link__copy{text-decoration-thickness:3px!important}}.ds-link:focus{text-decoration:none;outline:none;box-shadow:none}.ds-link__container{min-height:48px}.ds-link ds-icon{vertical-align:sub}@media all and (-ms-high-contrast: none),(-ms-high-contrast: active){.ds-link ds-icon{vertical-align:top}}.ds-link ds-icon.left{margin-right:4px}.ds-link.-cta .ds-link__copy{text-decoration:underline}.ds-link.-icon{color:var(--ds-txt-interactive-default-neutral)}.dsa-navigationTertiary__trigger.ds-button.-secondary{border:0px!important;background:var(--ds-bg-interactive-neutral-default);border-color:var(--ds-br-interactive-default-neutral);color:var(--ds-txt-interactive-default-neutral);border-radius:0!important}.dsa-navigationTertiary__trigger.ds-button.-secondary .ds-button__wrapper{justify-content:space-between!important}.dsa-navigationTertiary__trigger.ds-button.-secondary:hover,.dsa-navigationTertiary__trigger.ds-button.-secondary:active{background:var(--ds-bg-interactive-neutral-default);color:var(--ds-txt-interactive-default-neutral)}.dsa-navigationTertiary__trigger.ds-button.-secondary:hover .ds-button__copy,.dsa-navigationTertiary__trigger.ds-button.-secondary:active .ds-button__copy{text-decoration:none!important}.dsa-navigationTertiary__link{position:relative}.dsa-navigationTertiary__link.-selected:after{content:"";position:absolute;height:100%;width:6px;left:0;background-color:var(--ds-br-interactive-highlight)}.dsa-navigationTertiary__link:hover,.dsa-navigationTertiary__link:focus{background:var(--ds-bg-interactive-neutral-hover)}.dsa-layout>.row>*{display:block}dsa-text h1.-left,dsa-text p.-left{text-align:left}.ds-breadcrumb__list{list-style:none}.ds-breadcrumb__listItem{display:inline}@media (max-width: 899.98px){.ds-breadcrumb__listItem{display:none}.ds-breadcrumb__listItem.-previous{display:inherit}}.ds-breadcrumb .ds-link ds-icon{display:none}@media (max-width: 899.98px){.ds-breadcrumb .ds-link ds-icon{display:inline-block}}ds-icon{display:inline-flex;justify-content:center}ds-icon.-size-24{min-width:24px;width:24px;height:24px}ds-icon.-size-24 .ds-icon{font-size:2.4rem;line-height:24px}ds-icon.-size-48{min-width:48px;width:48px;height:48px}ds-icon.-size-48 .ds-icon{font-size:4.8rem;line-height:48px}[theme=rogers] [mode=light]{--ds-bg-body-default:var(--ds-white);--ds-bg-body-container:var(--ds-snow);--ds-bg-brand-default:var(--ds-rogers-red);--ds-bg-brand-light:var(--ds-rogers-berry);--ds-bg-interactive-default:var(--ds-rogers-red);--ds-bg-interactive-hover:var(--ds-rogers-pinot);--ds-bg-interactive-disabled:var(--ds-snow);--ds-bg-interactive-neutral-default:var(--ds-white);--ds-bg-interactive-neutral-hover:var(--ds-misty);--ds-bg-interactive-neutral-selected:var(--ds-slate);--ds-bg-feedback-error:var(--ds-red-light);--ds-bg-feedback-warning:var(--ds-yellow-light);--ds-bg-feedback-success:var(--ds-green-light);--ds-bg-feedback-info:var(--ds-blue-light);--ds-bg-feedback-neutral:var(--ds-misty);--ds-bg-feedback-skeleton:var(--ds-fog);--ds-txt-body-default:var(--ds-slate);--ds-txt-body-secondary:var(--ds-soot);--ds-txt-body-highlight:var(--ds-rogers-red);--ds-txt-body-link:var(--ds-link-dark);--ds-txt-brand-default:var(--ds-white);--ds-txt-brand-light:var(--ds-slate);--ds-txt-interactive-default:var(--ds-white);--ds-txt-interactive-hover:var(--ds-white);--ds-txt-interactive-default-neutral:var(--ds-slate);--ds-txt-interactive-disabled:var(--ds-storm);--ds-txt-interactive-highlight:var(--ds-rogers-red);--ds-txt-interactive-highlight-hover:var(--ds-rogers-pinot);--ds-txt-interactive-link:var(--ds-link-dark);--ds-txt-feedback-error:var(--ds-red-dark);--ds-txt-feedback-warning:var(--ds-yellow-dark);--ds-txt-feedback-success:var(--ds-green-dark);--ds-txt-feedback-info:var(--ds-blue-dark);--ds-txt-feedback-neutral:var(--ds-slate);--ds-txt-body-link-hover:var(--ds-rogers-pinot);--ds-icon-body-default:var(--ds-slate);--ds-icon-body-secondary:var(--ds-soot);--ds-icon-body-highlight:var(--ds-rogers-red);--ds-icon-brand-default:var(--ds-white);--ds-icon-brand-light:var(--ds-slate);--ds-icon-interactive-default:var(--ds-white);--ds-icon-interactive-hover:var(--ds-white);--ds-icon-interactive-default-neutral:var(--ds-slate);--ds-icon-interactive-disabled:var(--ds-storm);--ds-icon-interactive-highlight:var(--ds-rogers-red);--ds-icon-interactive-highlight-hover:var(--ds-rogers-pinot);--ds-icon-interactive-link:var(--ds-link-dark);--ds-icon-feedback-error:var(--ds-red);--ds-icon-feedback-warning:var(--ds-yellow);--ds-icon-feedback-success:var(--ds-green);--ds-icon-feedback-info:var(--ds-blue);--ds-icon-feedback-neutral:var(--ds-slate);--ds-br-body-default:var(--ds-concrete);--ds-br-body-secondary:var(--ds-soot);--ds-br-body-highlight:var(--ds-rogers-red);--ds-br-body-tile:var(--ds-fog);--ds-br-brand-default:var(--ds-white);--ds-br-brand-light:var(--ds-slate);--ds-br-interactive-default:var(--ds-white);--ds-br-interactive-default-neutral:var(--ds-slate);--ds-br-interactive-subdued-neutral:var(--ds-concrete);--ds-br-interactive-disabled:var(--ds-storm);--ds-br-interactive-highlight:var(--ds-rogers-red);--ds-br-interactive-highlight-hover:var(--ds-rogers-pinot);--ds-br-interactive-link:var(--ds-link-dark);--ds-br-feedback-error:var(--ds-red);--ds-br-feedback-warning:var(--ds-yellow);--ds-br-feedback-success:var(--ds-green);--ds-br-feedback-info:var(--ds-blue);--ds-br-feedback-neutral:var(--ds-soot)}.ds-bg-body-default{background-color:var(--ds-bg-body-default)}.ds-txt-body-default{color:var(--ds-txt-body-default)}.ds-title-5{text-transform:var(--ds-title-5-text-transform, initial);letter-spacing:var(--ds-title-5-letter-spacing, initial);line-height:var(--ds-title-5-line-height, initial);font-weight:var(--ds-title-5-font-weight, initial);font-size:var(--ds-title-5-font-size, initial)}@media (min-width: 900px){.ds-title-5{font-size:var(--ds-title-5-font-size-tablet, initial)}}@media (min-width: 1200px){.ds-title-5{font-size:var(--ds-title-5-font-size-desktop, initial)}}.ds-body-l{text-transform:var(--ds-body-l-text-transform, initial);letter-spacing:var(--ds-body-l-letter-spacing, initial);line-height:var(--ds-body-l-line-height, initial);font-weight:var(--ds-body-l-font-weight, initial);font-size:var(--ds-body-l-font-size, initial)}.ds-body-r{text-transform:var(--ds-body-r-text-transform, initial);letter-spacing:var(--ds-body-r-letter-spacing, initial);line-height:var(--ds-body-r-line-height, initial);font-weight:var(--ds-body-r-font-weight, initial);font-size:var(--ds-body-r-font-size, initial)}.ds-txt-button{text-transform:var(--ds-txt-button-text-transform, initial);letter-spacing:var(--ds-txt-button-letter-spacing, initial);line-height:var(--ds-txt-button-line-height, initial);font-weight:var(--ds-txt-button-font-weight, initial);font-size:var(--ds-txt-button-font-size, initial)}@media (max-width: 899px){.container{overflow-x:hidden}}.l-pageMain{position:relative;padding-top:128px;padding-bottom:48px;transition:padding-top .6s cubic-bezier(.4,0,.2,1)}@media (max-width: 1199.98px){.l-pageMain{padding-top:80px;padding-bottom:24px}}</style>
+  <link href="/rbrw/styles.4405ca4cc73ab562.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+   <link rel="stylesheet" href="/rbrw/styles.4405ca4cc73ab562.css">
+  </noscript>
+  <title>Payment  Support - Rogers</title>
+  <meta property="og:title" content="Payment  Support - Rogers">
+  <meta name="description" content="NA">
+  <meta property="og:description" content="NA">
+  <link rel="canonical" href="https://www.rogers.com/support/billing-accounts/payment">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rogers Communications Inc","url":"https://www.rogers.com","logo":"https://www.rogers.com/app/prod/assets/i/logo.png","sameAs":["https://www.facebook.com/Rogers","https://www.instagram.com/rogers","https://www.youtube.com/user/RogersCanada","https://www.linkedin.com/company/rogers-communications/","https://twitter.com/rogers","https://www.google.com/search?kgmid=/m/020nwq","https://www.wikidata.org/wiki/Q165684","https://en.wikipedia.org/wiki/Rogers_Communications"],"description":"Rogers is Canada’s leading wireless, cable and media company that provides connectivity and entertainment to Canadian consumers and businesses across the country."}</script>
+  <link rel="alternate" hreflang="en-CA" href="https://www.rogers.com/support/billing-accounts/payment">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.rogers.com/fr/soutien/facturation-comptes/paiement">
+  <link rel="alternate" hreflang="x-default" href="https://www.rogers.com/support/billing-accounts/payment">
+  <style ng-app-id="ng">iframe[_ngcontent-ng-c3666712799] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.ov-header[_ngcontent-ng-c3666712799] {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  background-color: #fff;
+}
+
+.ov-main[_ngcontent-ng-c3666712799] {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 48px;
+  transition: padding-top 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main[_ngcontent-ng-c3666712799] {
+  overflow-wrap: break-word;
+}
+@media (max-width: 899px) {
+  .main[_ngcontent-ng-c3666712799] {
+    overflow-x: hidden;
+  }
+}
+
+.main-header-footer-not-displayed[_ngcontent-ng-c3666712799] {
+  padding-top: 0 !important;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxpQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsOEJBQUE7QUFDRjs7QUFFQTtFQUNFLGVBQUE7RUFDQSxNQUFBO0VBQ0EsV0FBQTtFQUNBLFdBQUE7RUFDQSxzQkFBQTtBQUNGOztBQUVBO0VBQ0Usa0JBQUE7RUFDQSxrQkFBQTtFQUNBLG9CQUFBO0VBQ0EseURBQUE7QUFDRjs7QUFDQTtFQUNFLHlCQUFBO0FBRUY7QUFERTtFQUZGO0lBR0ksa0JBQUE7RUFJRjtBQUNGOztBQURBO0VBQ0UseUJBQUE7QUFJRiIsImZpbGUiOiJtYWluLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaWZyYW1lIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHotaW5kZXg6IDk5OTk5OTk5O1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xufVxuXG4ub3YtaGVhZGVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDA7XG4gIHotaW5kZXg6IDIwO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbn1cblxuLm92LW1haW4ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHBhZGRpbmctdG9wOiAxMDBweDtcbiAgcGFkZGluZy1ib3R0b206IDQ4cHg7XG4gIHRyYW5zaXRpb246IHBhZGRpbmctdG9wIDAuNnMgY3ViaWMtYmV6aWVyKDAuNCwgMCwgMC4yLCAxKTtcbn1cbi5tYWluIHtcbiAgb3ZlcmZsb3ctd3JhcDogYnJlYWstd29yZDtcbiAgQG1lZGlhIChtYXgtd2lkdGg6IDg5OXB4KSB7XG4gICAgb3ZlcmZsb3cteDogaGlkZGVuO1xuICB9XG59XG5cbi5tYWluLWhlYWRlci1mb290ZXItbm90LWRpc3BsYXllZCB7XG4gIHBhZGRpbmctdG9wOiAwICFpbXBvcnRhbnQ7XG59XG4iXX0= */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2xpYnMvc2hhcmVkLWFuZ3VsYXIvc3JjL2xpYi9jb21wb25lbnRzL21haW4vbWFpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQUE7RUFDQSxNQUFBO0VBQ0EsT0FBQTtFQUNBLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLGFBQUE7RUFDQSw4QkFBQTtBQUNGOztBQUVBO0VBQ0UsZUFBQTtFQUNBLE1BQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0Esb0JBQUE7RUFDQSx5REFBQTtBQUNGOztBQUNBO0VBQ0UseUJBQUE7QUFFRjtBQURFO0VBRkY7SUFHSSxrQkFBQTtFQUlGO0FBQ0Y7O0FBREE7RUFDRSx5QkFBQTtBQUlGO0FBQ0EsNDBDQUE0MEMiLCJzb3VyY2VzQ29udGVudCI6WyJpZnJhbWUge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgei1pbmRleDogOTk5OTk5OTk7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMHZoO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG59XG5cbi5vdi1oZWFkZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgei1pbmRleDogMjA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xufVxuXG4ub3YtbWFpbiB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgcGFkZGluZy10b3A6IDEwMHB4O1xuICBwYWRkaW5nLWJvdHRvbTogNDhweDtcbiAgdHJhbnNpdGlvbjogcGFkZGluZy10b3AgMC42cyBjdWJpYy1iZXppZXIoMC40LCAwLCAwLjIsIDEpO1xufVxuLm1haW4ge1xuICBvdmVyZmxvdy13cmFwOiBicmVhay13b3JkO1xuICBAbWVkaWEgKG1heC13aWR0aDogODk5cHgpIHtcbiAgICBvdmVyZmxvdy14OiBoaWRkZW47XG4gIH1cbn1cblxuLm1haW4taGVhZGVyLWZvb3Rlci1ub3QtZGlzcGxheWVkIHtcbiAgcGFkZGluZy10b3A6IDAgIWltcG9ydGFudDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style ng-app-id="ng">[class^=col-][_ngcontent-ng-c2451678050] {
+  margin-bottom: 24px;
+}
+
+section[_ngcontent-ng-c2451678050] {
+  margin-bottom: 24px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImR5bmFtaWMtcGFnZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFBO0FBQ0Y7O0FBRUE7RUFDRSxtQkFBQTtBQUNGIiwiZmlsZSI6ImR5bmFtaWMtcGFnZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIltjbGFzc149J2NvbC0nXSB7XG4gIG1hcmdpbi1ib3R0b206IDI0cHg7XG59XG5cbnNlY3Rpb24ge1xuICBtYXJnaW4tYm90dG9tOiAyNHB4O1xufVxuIl19 */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcHMvYnJvd3NlL3NoYXJlZC9zcmMvY29tcG9uZW50cy9keW5hbWljLXBhZ2UvZHluYW1pYy1wYWdlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsbUJBQUE7QUFDRjs7QUFFQTtFQUNFLG1CQUFBO0FBQ0Y7QUFDQSx3WkFBd1oiLCJzb3VyY2VzQ29udGVudCI6WyJbY2xhc3NePSdjb2wtJ10ge1xuICBtYXJnaW4tYm90dG9tOiAyNHB4O1xufVxuXG5zZWN0aW9uIHtcbiAgbWFyZ2luLWJvdHRvbTogMjRweDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style ng-app-id="ng">
+
+.noHeight[_ngcontent-ng-c2278299083] {
+  min-height: 0 !important;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVpLWRvY2suY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsc0NBQUE7QUFFQTtFQUNFLHdCQUFBO0FBQUYiLCJmaWxlIjoidWktZG9jay5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIHN0eWxlbGludC1kaXNhYmxlIG5vLWVtcHR5LXNvdXJjZSAqL1xuXG4ubm9IZWlnaHQge1xuICBtaW4taGVpZ2h0OiAwICFpbXBvcnRhbnQ7XG59XG4iXX0= */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2xpYnMvc2hhcmVkLWFuZ3VsYXIvc3JjL2xpYi9jb21wb25lbnRzL3VpLWRvY2svdWktZG9jay5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxzQ0FBQTtBQUVBO0VBQ0Usd0JBQUE7QUFBRjtBQUNBLGdZQUFnWSIsInNvdXJjZXNDb250ZW50IjpbIi8qIHN0eWxlbGludC1kaXNhYmxlIG5vLWVtcHR5LXNvdXJjZSAqL1xuXG4ubm9IZWlnaHQge1xuICBtaW4taGVpZ2h0OiAwICFpbXBvcnRhbnQ7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style>
+  <style ng-app-id="ng">
+
+.xRayMode[_ngcontent-ng-c2874425455] {
+  position: relative;
+  margin: 5px;
+  border: rgb(71, 11, 71) 3px solid;
+  border-radius: 4px;
+}
+
+.xRayModeLink[_ngcontent-ng-c2874425455] {
+  color: rgb(71, 11, 71);
+  cursor: pointer;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVpLWJsb2NrLXdyYXBwZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsc0NBQUE7QUFDQTtFQUNFLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLGlDQUFBO0VBQ0Esa0JBQUE7QUFDRjs7QUFFQTtFQUNFLHNCQUFBO0VBQ0EsZUFBQTtBQUNGIiwiZmlsZSI6InVpLWJsb2NrLXdyYXBwZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBzdHlsZWxpbnQtZGlzYWJsZSBuby1lbXB0eS1zb3VyY2UgKi9cbi54UmF5TW9kZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbWFyZ2luOiA1cHg7XG4gIGJvcmRlcjogcmdiKDcxLCAxMSwgNzEpIDNweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xufVxuXG4ueFJheU1vZGVMaW5rIHtcbiAgY29sb3I6IHJnYig3MSwgMTEsIDcxKTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuIl19 */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2xpYnMvc2hhcmVkLWFuZ3VsYXIvc3JjL2xpYi9jb21wb25lbnRzL3VpLWJsb2NrL3VpYmxvY2std3JhcHBlci91aS1ibG9jay13cmFwcGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHNDQUFBO0FBQ0E7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxpQ0FBQTtFQUNBLGtCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxzQkFBQTtFQUNBLGVBQUE7QUFDRjtBQUNBLG9xQkFBb3FCIiwic291cmNlc0NvbnRlbnQiOlsiLyogc3R5bGVsaW50LWRpc2FibGUgbm8tZW1wdHktc291cmNlICovXG4ueFJheU1vZGUge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG1hcmdpbjogNXB4O1xuICBib3JkZXI6IHJnYig3MSwgMTEsIDcxKSAzcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbn1cblxuLnhSYXlNb2RlTGluayB7XG4gIGNvbG9yOiByZ2IoNzEsIDExLCA3MSk7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <style ng-app-id="ng">#invisible-h1-for-screen-readers[_ngcontent-ng-c903783971] {
+  display: none;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVpLWJsb2NrLXRleHQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0FBQ0YiLCJmaWxlIjoidWktYmxvY2stdGV4dC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNpbnZpc2libGUtaDEtZm9yLXNjcmVlbi1yZWFkZXJzIHtcbiAgZGlzcGxheTogbm9uZTtcbn1cbiJdfQ== */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2xpYnMvc2hhcmVkLWFuZ3VsYXIvc3JjL2xpYi9jb21wb25lbnRzL3VpLWJsb2NrL3RleHQvdWktYmxvY2stdGV4dC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7QUFDRjtBQUNBLHdWQUF3ViIsInNvdXJjZXNDb250ZW50IjpbIiNpbnZpc2libGUtaDEtZm9yLXNjcmVlbi1yZWFkZXJzIHtcbiAgZGlzcGxheTogbm9uZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style>
+  <meta name="robots" content="noindex">
+  <script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+  <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="58MW6-74XQ7-7295K-C7VCE-JMLBW",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"58MW6-74XQ7-7295K-C7VCE-JMLBW";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="rz7f7uixelpisz2gatha-f-dc271aa3e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"916751","ak.ai":parseInt("201229",10),"ak.ol":"0","ak.cr":10,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"ed87e892","ak.r":47854,"ak.a2":n,"ak.m":"e12","ak.n":"essl","ak.bpcip":"142.126.95.0","ak.cport":64186,"ak.gh":"23.42.150.37","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1732641998","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==xMV8lN+SFHwNKKlW/Ev7j1R+umxemU8Zm3yVpBz5GdnEUifMRcBKqiiIHdQ0cHIwerkbJoPdDVWZHuPRZJQeoGVDJF53pWSKTV9J8QdGZn63mLUoGK17Nhn6fFXrCc6ewbaMXzV/qZs2+fDHWCa5dGJsbXp4FPv5A5Lcq9OwxZdCCtxbyInk2OEzf8/S+T3MMq0CxKApQ0iKDTd+Dsep4nKYcKSHgZy+GoTRUdsBscCLOklgu1OfbYGvh8KxOZhSZVvMPN7BSFsaVviX2TYrkNqowS8iAu0nNRRTrdtyQEjW2W9NG5QvQ9xRw8zCSnl82o+x5m7N7PWiLK6u3ECLda4Ndv0wrXG/VBQsamro57+S1awOCp50M2xDKCXB1283tFkS6IyTflVAOwfp4YB37x8rLAaZg0tWuIL8qHduSCw=","ak.pv":"1554","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>
+ </head>
+ <body style="opacity: 1 !important" mode="light" tabindex="-1" onload="onLoad()">
+  <p hidden></p><a hidden></a>
+  <noscript>
+   Please enable JavaScript to continue using this application.
+  </noscript>
+  <div id="divAppLoading">
+   <img src="https://images.ctfassets.net/8utyj17y1gom/1ZjohYYJ5GY6AgTs0WV5IY/8b2c06bb962fb3dcc5098509aed94f22/rogers.svg" alt="Loading...">
+  </div>
+  <div id="divApp" style="opacity: 0; background-color: #fff;">
+   <ge-header></ge-header><browse-root ng-version="17.3.11" ng-server-context="ssr">
+    <rci-main _nghost-ng-c3666712799>
+     <div _ngcontent-ng-c3666712799 id="divPageLoading">
+      <div _ngcontent-ng-c3666712799 id="divPageLoadingBackdrop"></div><ds-progress-spinner _ngcontent-ng-c3666712799 variant="vanity" isloading="true" style="z-index: 99999999;" class="w-100">
+       <div class="ng-star-inserted">
+        <div class="ds-progress-spinner variant-vanity position-fixed top-0 left-0 min-vw-100 min-vh-100 bg-semi-transparent ng-star-inserted">
+         <div class="ds-progress-spinner__container full-screen m-auto ds-bg-body-default bradius-round b-4 b-solid ng-star-inserted">
+          <ds-icon size="48" class="full-screen m-auto -size-48 ng-star-inserted">
+           <span role="img" class="ds-icon d-inline-flex rds-icon-wireless" aria-hidden="true"><!----><!----></span>
+          </ds-icon><ds-icon size="48" class="full-screen m-auto -size-48 ng-star-inserted">
+           <span role="img" class="ds-icon d-inline-flex rds-icon-laptop" aria-hidden="true"><!----><!----></span>
+          </ds-icon><ds-icon size="48" class="full-screen m-auto -size-48 ng-star-inserted">
+           <span role="img" class="ds-icon d-inline-flex rds-icon-tv" aria-hidden="true"><!----><!----></span>
+          </ds-icon><ds-icon size="48" class="full-screen m-auto -size-48 ng-star-inserted">
+           <span role="img" class="ds-icon d-inline-flex rds-icon-home" aria-hidden="true"><!----><!----></span>
+          </ds-icon><ds-icon size="48" class="full-screen m-auto -size-48 ng-star-inserted">
+           <span role="img" class="ds-icon d-inline-flex rds-icon-home-phone" aria-hidden="true"><!----><!----></span>
+          </ds-icon><!----><!---->
+          <svg width="72px" height="72px" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="ds-progress-spinner__vanity-svg">
+           <circle fill="none" stroke-linecap="round" cx="40" cy="40" r="38" vector-effect="non-scaling-stroke" class="line" stroke-width="4" /><circle fill="none" stroke-linecap="round" cx="40" cy="40" r="38" vector-effect="non-scaling-stroke" class="background" stroke-width="4" />
+          </svg>
+         </div><!---->
+        </div><!----><!---->
+       </div><!----><!----><!---->
+      </ds-progress-spinner>
+     </div><!---->
+     <main _ngcontent-ng-c3666712799 id="mainContent" tabindex="-1" class="l-pageMain main">
+      <router-outlet _ngcontent-ng-c3666712799></router-outlet><ng-component _nghost-ng-c2451678050 class="ng-star-inserted">
+       <div _ngcontent-ng-c2451678050>
+        <div _ngcontent-ng-c2451678050 class="ng-star-inserted">
+         <div _ngcontent-ng-c2451678050 class="ng-star-inserted">
+          <!----><!----><rci-ui-dock _ngcontent-ng-c2451678050 _nghost-ng-c2278299083 class="ng-star-inserted">
+           <dsa-layout _ngcontent-ng-c2278299083 class="w-100 ng-star-inserted">
+            <div class="dsa-layout container">
+             <div class="row">
+              <!----><rci-ui-block-wrapper _ngcontent-ng-c2278299083 class="noHeight ng-star-inserted" _nghost-ng-c2874425455>
+               <div _ngcontent-ng-c2874425455 class>
+                <!---->
+                <div _ngcontent-ng-c2278299083 class="col-center">
+                 <rci-ui-block-breadcrumbs class="ng-star-inserted">
+                  <ds-breadcrumb>
+                   <div class="ds-bg-body-default ds-border-bottom">
+                    <div class="container py-12">
+                     <nav class="ds-breadcrumb" aria-label="Breadcrumb">
+                      <ul class="ds-breadcrumb__list m-0 p-0">
+                       <li class="ds-breadcrumb__listItem m-0 p-0 ng-star-inserted"><!----><a ds-link title="Support" href="/support" tabindex="0" role="link" class="ds-link ds-pointer d-inline-flex outline-none mw-100 -cta text-no-decoration ng-star-inserted"><span class="ds-link__container d-flex align-items-center"><span role="text" class="ds-link__wrapper d-inline-block ds-txt-button"><ds-icon class="left -size-24">
+                            <span role="img" class="ds-icon d-inline-flex rds-icon-left" aria-hidden="true"><!----><!----></span>
+                           </ds-icon><span class="ds-link__copy"> Support <!----></span><!----></span></span></a><!----><!----><!----><span aria-hidden="true" class="ds-breadcrumb__separator d-none d-md-inline px-4 ng-star-inserted">/</span><!----></li>
+                       <li class="ds-breadcrumb__listItem m-0 p-0 -previous ng-star-inserted"><!----><a ds-link title="Billing &amp; Accounts" href="/support/billing-accounts" tabindex="0" role="link" class="ds-link ds-pointer d-inline-flex outline-none mw-100 -cta text-no-decoration ng-star-inserted"><span class="ds-link__container d-flex align-items-center"><span role="text" class="ds-link__wrapper d-inline-block ds-txt-button"><ds-icon class="left -size-24">
+                            <span role="img" class="ds-icon d-inline-flex rds-icon-left" aria-hidden="true"><!----><!----></span>
+                           </ds-icon><span class="ds-link__copy"> Billing &amp; Accounts <!----></span><!----></span></span></a><!----><!----><!----><span aria-hidden="true" class="ds-breadcrumb__separator d-none d-md-inline px-4 ng-star-inserted">/</span><!----></li>
+                       <li class="ds-breadcrumb__listItem m-0 p-0 ng-star-inserted"><span class="ng-star-inserted">Payment</span><!----><!----><!----></li><!---->
+                      </ul>
+                     </nav>
+                    </div>
+                   </div>
+                  </ds-breadcrumb>
+                 </rci-ui-block-breadcrumbs><!---->
+                </div>
+               </div>
+              </rci-ui-block-wrapper><!----><!---->
+             </div>
+            </div>
+           </dsa-layout><!----><!----><!---->
+          </rci-ui-dock><rci-ui-dock _ngcontent-ng-c2451678050 _nghost-ng-c2278299083 class="ng-star-inserted">
+           <dsa-layout _ngcontent-ng-c2278299083 class="w-100 ng-star-inserted">
+            <div class="dsa-layout container">
+             <div class="row">
+              <!----><rci-ui-block-wrapper _ngcontent-ng-c2278299083 class="noHeight ng-star-inserted" _nghost-ng-c2874425455>
+               <div _ngcontent-ng-c2874425455 class>
+                <!---->
+                <div _ngcontent-ng-c2278299083 class="col-center">
+                 <rci-ui-block-text _nghost-ng-c903783971 class="ng-star-inserted">
+                  <div _ngcontent-ng-c903783971 id mode="light" class="pt-md-0 pb-md-0 pt-0 pb-0 mt-md-0 mb-md-24 mt-0 mb-16 container">
+                   <div _ngcontent-ng-c903783971 class="uiBlock">
+                    <dsa-text _ngcontent-ng-c903783971 mode="light">
+                     <p class="-left text-boy"></p>
+                    </dsa-text>
+                   </div>
+                  </div>
+                 </rci-ui-block-text><!---->
+                </div>
+               </div>
+              </rci-ui-block-wrapper><!----><!---->
+             </div>
+            </div>
+           </dsa-layout><!----><!----><!---->
+          </rci-ui-dock><rci-ui-dock _ngcontent-ng-c2451678050 _nghost-ng-c2278299083 class="ng-star-inserted">
+           <dsa-layout _ngcontent-ng-c2278299083 class="w-100 ng-star-inserted">
+            <div class="dsa-layout container" style="overflow-x: inherit;">
+             <div class="row">
+              <rci-ui-block-wrapper _ngcontent-ng-c2278299083 class="noHeight ng-star-inserted" _nghost-ng-c2874425455>
+               <div _ngcontent-ng-c2874425455 class>
+                <!---->
+                <div _ngcontent-ng-c2278299083 class="col-left">
+                 <rci-ui-block-navigation-tertiary class="ng-star-inserted">
+                  <div class="jsUiBlockNavigationTertiary pb-24" id>
+                   <dsa-navigation-tertiary class="ng-tns-c3472270511-0 ng-star-inserted">
+                    <nav class="dsa-navigationTertiary ng-tns-c3472270511-0" aria-label>
+                     <div class="mw-100 d-none d-md-block ng-tns-c3472270511-0">
+                      <h2 class="dsa-navigationTertiary__heading ds-title-5 mw-content mb-16 ng-tns-c3472270511-0">Billing &amp; Accounts</h2>
+                      <ul class="w-100 list-none ng-tns-c3472270511-0 ng-star-inserted">
+                       <li class="ng-tns-c3472270511-0 ng-star-inserted"><a ds-link class="dsa-navigationTertiary__link minw-100 pl-24 ng-tns-c3472270511-0 ds-link ds-pointer d-inline-flex outline-none mw-100 -icon text-no-decoration" aria-label href="/support/billing-accounts/billing" target="_self" tabindex="0" role="link"><span class="ds-link__container d-flex align-items-center"><span role="text" class="ds-link__wrapper d-inline-block ds-txt-button"><span class="ds-link__copy"><span z class="ds-body-r text-no-decoration text-default">Billing</span><!----></span><!----></span></span></a></li>
+                       <li class="ng-tns-c3472270511-0 ng-star-inserted"><a ds-link class="dsa-navigationTertiary__link minw-100 pl-24 ng-tns-c3472270511-0 ds-link ds-pointer d-inline-flex outline-none mw-100 -icon -selected text-no-decoration" aria-label href="/support/billing-accounts/payment" target="_self" aria-current="page" tabindex="0" role="link"><span class="ds-link__container d-flex align-items-center"><span role="text" class="ds-link__wrapper d-inline-block ds-txt-button text-bold"><span class="ds-link__copy"><span z class="ds-body-r text-no-decoration text-bold">Payment</span><!----></span><!----></span></span></a></li>
+                       <li class="ng-tns-c3472270511-0 ng-star-inserted"><a ds-link class="dsa-navigationTertiary__link minw-100 pl-24 ng-tns-c3472270511-0 ds-link ds-pointer d-inline-flex outline-none mw-100 -icon text-no-decoration" aria-label href="/support/billing-accounts/account-management" target="_self" tabindex="0" role="link"><span class="ds-link__container d-flex align-items-center"><span role="text" class="ds-link__wrapper d-inline-block ds-txt-button"><span class="ds-link__copy"><span z class="ds-body-r text-no-decoration text-default">Account Management</span><!----></span><!----></span></span></a></li>
+                       <li class="ng-tns-c3472270511-0 ng-star-inserted"><a ds-link class="dsa-navigationTertiary__link minw-100 pl-24 ng-tns-c3472270511-0 ds-link ds-pointer d-inline-flex outline-none mw-100 -icon text-no-decoration" aria-label href="/support/billing-accounts/security" target="_self" tabindex="0" role="link"><span class="ds-link__container d-flex align-items-center"><span role="text" class="ds-link__wrapper d-inline-block ds-txt-button"><span class="ds-link__copy"><span z class="ds-body-r text-no-decoration text-default">Security</span><!----></span><!----></span></span></a></li>
+                       <li class="ng-tns-c3472270511-0 ng-star-inserted"><a ds-link class="dsa-navigationTertiary__link minw-100 pl-24 ng-tns-c3472270511-0 ds-link ds-pointer d-inline-flex outline-none mw-100 -icon text-no-decoration" aria-label href="/support/billing-accounts/terms-policies" target="_self" tabindex="0" role="link"><span class="ds-link__container d-flex align-items-center"><span role="text" class="ds-link__wrapper d-inline-block ds-txt-button"><span class="ds-link__copy"><span z class="ds-body-r text-no-decoration text-default">Terms &amp; Policies</span><!----></span><!----></span></span></a></li><!---->
+                      </ul><!---->
+                     </div>
+                     <div class="mw-100 position-relative d-md-none ng-tns-c3472270511-0 ds-shadow">
+                      <button ds-button variant="secondary" cdkoverlayorigin class="dsa-navigationTertiary__trigger d-md-none w-100 ng-tns-c3472270511-0 ds-button ds-pointer text-center mw-100 d-inline-block -secondary -large text-no-decoration" aria-label="open dropdown menu" aria-expanded="false" tabindex="0"><span role="text" class="ds-button__wrapper d-flex justify-content-center align-items-center"><!----><span class="ds-button__copy ds-txt-button text-nowrap ds-no-overflow mw-100"><span class="ds-title-5">Billing &amp; Accounts</span><!----></span><ds-icon class="ng-trigger ng-trigger-indicatorRotate -size-24 ng-star-inserted" style="transform: rotate(0deg);">
+                         <span role="img" class="ds-icon d-inline-flex rds-icon-chevron-down" aria-hidden="true"><!----><!----></span>
+                        </ds-icon><!----><!----></span></button>
+                     </div>
+                    </nav><!----><!---->
+                   </dsa-navigation-tertiary>
+                  </div>
+                 </rci-ui-block-navigation-tertiary><!---->
+                </div>
+               </div>
+              </rci-ui-block-wrapper><!----><!----><rci-ui-block-wrapper _ngcontent-ng-c2278299083 class="noHeight ng-star-inserted" _nghost-ng-c2874425455>
+               <div _ngcontent-ng-c2874425455 class>
+                <!---->
+                <div _ngcontent-ng-c2278299083 class="col-right">
+                 <rci-ui-block-text _nghost-ng-c903783971 class="ng-star-inserted">
+                  <div _ngcontent-ng-c903783971 id mode="light" class="pt-md-0 pb-md-0 pt-0 pb-0 mt-md-0 mb-md-24 mt-0 mb-16 container">
+                   <div _ngcontent-ng-c903783971 class="uiBlock">
+                    <dsa-text _ngcontent-ng-c903783971 mode="light">
+                     <h1 class="-left text-title-1 ds-txt-body-default">Payment</h1>
+                    </dsa-text>
+                   </div>
+                  </div>
+                 </rci-ui-block-text><ng-component class="ng-star-inserted">
+                  <div class="container mb-40" id>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="/support/billing-accounts/how-to-make-a-payment" target="_self" aria-label="/support/billing-accounts/how-to-make-a-payment" tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Make a payment</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="https://www.rogers.com/customer/support/article/how-to-update-payment-method" target="_self" aria-label="https://www.rogers.com/customer/support/article/how-to-update-payment-method" tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Update payment method</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="/support/billing-accounts/automatic-payments-discount-faq" target="_self" aria-label tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Automatic Payments Discount</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="https://www.rogers.com/support/billing-accounts/payment/payment-issues-errors" target="_self" aria-label="/support/billing-accounts/payment-issues" tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Payment Issues/Errors</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="https://www.rogers.com/support/billing-accounts/report-a-payment" target="_self" aria-label="/support/billing-accounts/report-a-payment" tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Report A Payment Made Recently</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="https://www.rogers.com/support/billing-accounts/payment-arrangement" target="_self" aria-label="/support/billing-accounts/payment-arrangement" tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Payment Arrangement</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="https://www.rogers.com/support/billing-accounts/late-payment-concerns" target="_self" aria-label="/support/billing-accounts/late-payment-concerns" tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Late Payment Concerns</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div>
+                   <div id="undefined" class="ng-star-inserted">
+                    <dsa-block-excerpt>
+                     <div class="dsa-blockExcerpt d-flex flex-column flex-md-row align-items-md-center">
+                      <!---->
+                      <div>
+                       <!---->
+                       <p class="dsa-blockExcerpt__heading mb-0 mw-content ds-body-l text-semi"><a class="dsa-blockExcerpt__headingLink text-no-decoration hover:text-underline focus:no-shadow keyboard-focused:shadow-focus keyboard-focused:text-underline" href="/support/billing-accounts/gift-cards" target="_blank" aria-label="/support/billing-accounts/gift-cards" tabindex="0"><span class="dsa-blockExcerpt__headingCopy">Rogers gift cards</span><span class="dsa-blockExcerpt__headingA11yDescription sr-only ng-star-inserted">opens in a new window</span><!----></a></p><!---->
+                      </div>
+                     </div>
+                    </dsa-block-excerpt>
+                    <div class="bb-1 ds-brcolor-concrete pb-12 mb-12"></div>
+                   </div><!---->
+                  </div>
+                 </ng-component><!---->
+                </div>
+               </div>
+              </rci-ui-block-wrapper><!---->
+             </div>
+            </div>
+           </dsa-layout><!----><!----><!---->
+          </rci-ui-dock><!---->
+         </div><!---->
+        </div><!----><!---->
+       </div>
+      </ng-component><!---->
+     </main>
+    </rci-main><!---->
+   </browse-root><ge-footer></ge-footer>
+  </div>
+  <script>(function(){var g=function(e,h,f,g){ this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null}; this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "}; this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0}; this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}}; this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}}; try{(new g(100,"r","QSI_S_ZN_71jVGuh6OtTk56J","//zn71jvguh6ottk56j-rogers.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_71jVGuh6OtTk56J&Q_LOC="+encodeURIComponent(window.location.href))).start()}catch(i){}})();</script>
+  <div id="ZN_71jVGuh6OtTk56J"></div>
+  <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive" id="cdk-live-announcer-214628"></div>
+  <script type="application/ld+json" id="cdk-breadcrumbs-schema">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Support","@id":"/support"}},{"@type":"ListItem","position":2,"item":{"name":"Billing & Accounts","@id":"/support/billing-accounts"}},{"@type":"ListItem","position":3,"item":{"name":"Payment","@id":"/support/billing-accounts/payment"}}]}</script>
+  <script id="ng-state" type="application/json">{"environment":{"production":true,"openSearchDropdown":false,"segments":[{"id":"22979638","segment":"Rogers_Abandon_Cart"},{"id":"22979640","segment":"Rogers_Renewal"},{"id":"22720949","segment":"CH_Only_Legacy"},{"id":"22720950","segment":"CH_Only_Ignite"},{"id":"24088516","segment":"WLS_Only_In_Footprint"},{"id":"22979610","segment":"Rogers_Add_A_Line"},{"id":"24132026","segment":"Rogers_WRLS_18M_TVM"},{"id":"18476533","segment":"Rogers_Wireless_Infinite_PPC_Banner"},{"id":"16275603","segment":"Wireless_Retention_Unicorn_Post-Launch"},{"id":"15131717","segment":"Rogers_WRLS_0_3"},{"id":"12260756","segment":"Rogers_WRLS_4_18"},{"id":"12260826","segment":"Rogers_WRLS_18_PLUS"},{"id":"12621849","segment":"Rogers_Converged"},{"id":"18394904","segment":"Rogers_Connected_Home_Ignite_Modem_Customers"},{"id":"14393371","segment":"Ignite_One_to_one_offer"},{"id":"12260872","segment":"Digital_Resi_20181026"},{"id":"22227487","segment":"Support_Hub_Hub_Fee"},{"id":"22247361","segment":"Support_Hub_Long_Distance"},{"id":"22248016","segment":"Support_Hub_Prorate"},{"id":"22227498","segment":"Support_Hub_Late_Payment"},{"id":"default","segment":"default"}],"isPreview":false,"loaderFadeOutDelay":300,"domain":"rogers.com","isLogToConsole":false,"contentful":{"host":"cdn-mr.contentful.com","previewHost":"preview.contentful.com","insecure":false,"basePath":"","space":"8utyj17y1gom","accessToken":"4f64fa121fa11512e7cd80555db4f813d782ea8c7333e7db0ea329e7850f1b9d","previewAccessToken":null,"environment":"master","appConfigId":"5LJtmAdzPBSTqbQhZ3zOo2"},"externalScripts":[{"url":"/chat/va.js"},{"url":"//assets.adobedtm.com/launch-ENf8625c925c374c26ac608257ab0cc207.min.js","loadInHead":true},{"url":"https://js-cdn.dynatrace.com/jstag/17a2d2e42ea/bf45860xtq/ce606e7a9dfabb4e_complete.js","isWaitUntilLoaded":false,"loadInHead":true}],"fontLinks":[{"url":"https://assets.rogers-assets.com/v3/fonts/rds-icon.woff","type":"font/woff"},{"url":"https://assets.rogers-assets.com/v3/fonts/rds-icon.ttf","type":"font/ttf"},{"url":"https://assets.rogers-assets.com/v3/fonts/TedNextVar-Italic.woff2","type":"font/woff2"},{"url":"https://assets.rogers-assets.com/v3/fonts/TedNextVar-Regular.woff2","type":"font/woff2"}],"audienceManagerUrlTemplate":"https://rogers.demdex.net/event?d_uuid={{uuid}}&d_cts=2&d_rtbd=json","cookieDomain":"","isQualtricsEnabled":true,"recaptchaKey":"6LdBI80aAAAAACONOP6tIRt2Z2kEp9ZvDsBvzPfp","leadFormBackendUrl":"/api-browse/form-leadgen","formBuilderElementsHost":"https://www.rogers.com/form-builder/form-builder-elements","formBuilderContentfulEnv":"qa","search":{},"phoneRateSearch":{"indexesPath":"prod-country-rates"},"userMonitoring":{"isEnable":true,"env":"prod","service":"Browse"},"globalElementsHost":"https://www.rogers-assets.com/global-elements/rogers/prod","oemApiUrl":"https://oem-stg1.stg01.cex.aks.rogers.com/api/catalogue","adobeAuthUrl":"https://auth-api1.stg01.cex.aks.rogers.com/api/adobe/token","adobeAppKey":"699ff3b14a5e48e1a0c3861f15e843ed","homepageStructuredData":{"common":{"name":"Rogers Communications Inc","url":"https://www.rogers.com","logo":"https://www.rogers.com/app/prod/assets/i/logo.png","sameAs":["https://www.facebook.com/Rogers","https://www.instagram.com/rogers","https://www.youtube.com/user/RogersCanada","https://www.linkedin.com/company/rogers-communications/","https://twitter.com/rogers","https://www.google.com/search?kgmid=/m/020nwq","https://www.wikidata.org/wiki/Q165684","https://en.wikipedia.org/wiki/Rogers_Communications"]},"en":{"description":"Rogers is Canada’s leading wireless, cable and media company that provides connectivity and entertainment to Canadian consumers and businesses across the country."},"fr":{"description":"Rogers est le chef de file au Canada dans le domaine des services sans-fil, câble et médias et fournit connectivité et services de divertissement au grand public et aux entreprises à l’échelle du Canada."}},"maxSlidesInCarousel":10,"featuredSearchAlgolia":{"appId":"OKQN7NJ6B8","apiKey":"468322fe7924073c162f89eca301fc2d"},"algolia":{"host":"https://{{app-id}}-dsn.algolia.net/1/indexes/","appId":"58GJRZK9H9","apiKey":"dae74fc62822bf769cdabb064b984eee"},"campaignStylesUrls":{"VBI HomePage":"https://assets.rogers-assets.com/campaign/rogers/prod/vbi.css","Wrapped in Red":"https://assets.rogers-assets.com/campaign/rogers/prod/wrapped-in-red.css"},"personalizationApiConfig":{"isApiEnabled":true,"targetEnv":"7fb491b9-c40a-358b-5f9f-e35fa6a6b6f2","adobeIdsCookie":"AMCV_D7FD34FA53D63B860A490D44@AdobeOrg","userBAN":"f1a16e03744e5a5bcd7ff9c067a9c65943010a9424785829675ab14846ae9d05","apiUrl":"https://mboxedge34.tt.omtrdc.net/rest/v1/delivery?client=rogerscommunicaitonp&version=2.8.2","ssrHostUrl":"https://www.rogers.com/","previewContentTypeId":"4diI7g8pP04i6brePGEM11"},"contentBaseFullHref":"https://www.rogers.com/app/prod"},"metadata":{"title":null,"description":null},"language":"en","province":"ON","isUserAuthenticated":false,"getDynamicPageContentfulRecord_support/billing-accounts/payment":{"id":"rLSQLkxMuFL88DksvJ8PR","urlsByLanguage":{"en":"/support/billing-accounts/payment","fr":"/soutien/facturation-comptes/paiement"}},"TRANSFER_STATE_KEY_NAVIGATE_URL_INITIAL_LOAD":"support/billing-accounts/payment","dynamicPageId_support/billing-accounts/payment":"rLSQLkxMuFL88DksvJ8PR"}</script>
+ </body>
+</html>

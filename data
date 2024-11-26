@@ -1,0 +1,32 @@
+ ██████  ██╗      █████╗ ███╗   ██╗       ███╗   ███╗ █████╗ ████████╗███████╗
+██╔   ██ ██║     ██╔══██╗████╗  ██║       ████╗ ████║██╔══██╗╚══██╔══╝██╔════╝
+██║█████ ██║     ███████║██╔██╗ ██║█████╗ ██╔████╔██║███████║   ██║   █████╗
+██║      ██║     ██╔══██║██║╚██╗██║╚════╝ ██║╚██╔╝██║██╔══██║   ██║   ██╔══╝
+██║      ███████╗██║  ██║██║ ╚████║       ██║ ╚═╝ ██║██║  ██║   ██║   ███████╗
+╚═╝      ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝       ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
+
+        ╔══════════════════════════════════════════════╗
+        ║       ~ PLAN YOUR DREAMS WITH PRECISION ~     ║
+        ║        ~ PARTNER IN SUCCESS, ALWAYS! ~        ║
+        ╚══════════════════════════════════════════════╝
+
+1. Get Bell Internet Plans
+2. Get Rogers Internet Plans
+3. Get Cogeco Internet Plans
+4. Search Internet Provider by Name
+5. Use Frequency Count Feature
+6. Use Search Frequency Feature
+7. Export terminal output to a file
+9. Exit
+Enter your choice: 
+Scraping Bell plans...
+1. Get Bell Internet Plans
+2. Get Rogers Internet Plans
+3. Get Cogeco Internet Plans
+4. Search Internet Provider by Name
+5. Use Frequency Count Feature
+6. Use Search Frequency Feature
+7. Export terminal output to a file
+9. Exit
+Enter your choice: 
+Enter the file name to export data (e.g., output.txt): 
