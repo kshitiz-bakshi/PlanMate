@@ -72,8 +72,10 @@ public class WordCompletion {
 
     // Static block to load vocabulary when the class is loaded
     static {
-        String filePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/CombinedPlans.csv";  // Adjust the path to your CSV file
+        String filePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/final.csv";  // Adjust the path to your CSV file
+        String filePath1 = "/Users/kshitiz/Documents/ACC ProjectF/untitled/words.txt";
         loadVocabulary(filePath);  // Load the vocabulary into the Trie
+        loadVocabulary(filePath1);
     }
 
     // Method to load vocabulary from a file into the Trie
@@ -93,10 +95,6 @@ public class WordCompletion {
                     }
                 }
             }
-            trie.insert("bell");
-            trie.insert("rogers");
-            trie.insert("Cogeco");
-            trie.insert("Show");
 //            System.out.println("Completed loading vocabulary. Total words loaded: " + wordCount);
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());

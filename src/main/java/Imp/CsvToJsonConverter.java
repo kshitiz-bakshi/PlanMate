@@ -10,8 +10,8 @@ public class CsvToJsonConverter {
 
     public static void main(String[] args) {
         // Hardcoded CSV file path
-        String csvFilePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/CombinedPlans.csv";  // Change this to the actual CSV file path
-        String jsonFilePath = "output.json";  // Output JSON file path
+        String csvFilePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/final.csv";  // Change this to the actual CSV file path
+        String jsonFilePath = "outputF.json";  // Output JSON file path
 
         List<Map<String, String>> csvData = readCsv(csvFilePath);
         if (csvData != null && !csvData.isEmpty()) {

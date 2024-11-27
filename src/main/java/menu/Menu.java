@@ -4,6 +4,7 @@ import Imp.*;
 import scraper.BellScraper;
 import scraper.CogecoScraper;
 import scraper.RogersScraper;
+import scraper.Shaw.MainShaw;
 import scraper.StarlinkScraper;
 
 import java.util.InputMismatchException;
@@ -36,8 +37,8 @@ public class Menu {
                 ╚═╝      ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝       ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
                                                                                       
                         ╔══════════════════════════════════════════════╗               
-                        ║       ~ PLAN YOUR DREAMS WITH PRECISION ~     ║
-                        ║        ~ PARTNER IN SUCCESS, ALWAYS! ~        ║
+                        ║       ~ PLAN YOUR INTERNET WITH PRECISION ~  ║
+                        ║        ~ HELP IN SAVINGS, ALWAYS! ~          ║
                         ╚══════════════════════════════════════════════╝               
                 """;
 
@@ -55,9 +56,10 @@ public class Menu {
                 System.out.println("7. Use Frequency Count Feature");
                 System.out.println("8. Use Search Frequency Feature");
                 System.out.println("9. Get Best Plan");
-                System.out.println("10. Find For a Word");
-                System.out.println("11. Web Crawler");
-                System.out.println("12. Exit");
+                System.out.println("10.Use Page Ranking Feature");
+                System.out.println("11.Find For a Word");
+                System.out.println("12.Web Crawler");
+                System.out.println("13.Exit");
                 System.out.print("Enter your choice: ");
 
                 // Handle input safely
@@ -69,15 +71,16 @@ public class Menu {
                     case 1 -> scrapePlans("Bell", BellScraper.class);
                     case 2 -> scrapePlans("Rogers", RogersScraper.class);
                     case 3 -> scrapePlans("Cogeco", CogecoScraper.class);
-                    case 4 -> System.out.println("Shaw plans feature is under construction.");
+                    case 4 -> scrapePlans("Shaw", MainShaw.class);
                     case 5 -> scrapePlans("Starlink", StarlinkScraper.class);
                     case 6 -> invokeFeature("Search Internet Provider by Name", SearchByName.class);
                     case 7 -> invokeFeature("Frequency Count", FrequencyCount.class);
                     case 8 -> invokeFeature("Search Frequency", SearchFrequency.class);
-                    case 9 -> invokeFeature("Get Best Plan", CheapestPlanFinder.class);
-                    case 10 -> invokeFeature("Find a Word", JsonSearch.class);
-                    case 11 -> invokeFeature("Web Crawler", WebCrawler.class);
-                    case 12 -> {
+                    case 9 -> invokeFeature("Get Best Plan", PlanFinder.class);
+                    case 10 -> invokeFeature("Page Ranking", FileSearchRanker.class);
+                    case 11 -> invokeFeature("Find a Word", JsonSearch.class);
+                    case 12 -> invokeFeature("Web Crawler", WebCrawler.class);
+                    case 13 -> {
                         System.out.println("Exiting...");
                         sleep(2000);
                         clearConsole();

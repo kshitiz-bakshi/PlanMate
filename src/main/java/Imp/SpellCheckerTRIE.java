@@ -54,7 +54,9 @@ public class SpellCheckerTRIE {
 
     public SpellCheckerTRIE(String filePath) {
         trieStructure = new Trie1();
+        String filePath1 = "/Users/kshitiz/Documents/ACC ProjectF/untitled/words.txt";
         loadVocabularyFromCSVFile(filePath);
+        loadVocabularyFromCSVFile(filePath1);
     }
 
     private void loadVocabularyFromCSVFile(String filePath) {
@@ -75,34 +77,41 @@ public class SpellCheckerTRIE {
     public String checkAndSuggest(String wordToCheck, int maximumDistance) {
         // If the word exists in the trie, return it directly
         if (trieStructure.searchWordInTrie(wordToCheck)) {
-            return wordToCheck;  // Return the word as it is already correct
+            return wordToCheck; // Return the word as it is already correct
         } else {
             List<String> suggestions = findSuggestionsForWord(wordToCheck, maximumDistance);
 
             if (!suggestions.isEmpty()) {
-                // Ask the user for confirmation of the suggestion
-                System.out.print("Do you mean " + suggestions + "? (yes/no): ");
-                Scanner scanner = new Scanner(System.in);
-                String confirmation = scanner.nextLine().toLowerCase();
-
-                // Keep prompting until the user enters a valid input ("yes" or "no")
-                while (!confirmation.equals("yes") && !confirmation.equals("no")) {
-                    System.out.print("Please enter a valid input (yes/no): ");
-                    confirmation = scanner.nextLine().toLowerCase();
+                System.out.println("Suggestions found: ");
+                for (int i = 0; i < suggestions.size(); i++) {
+                    System.out.println((i + 1) + ". " + suggestions.get(i));
                 }
 
-                // If the user confirms "yes", use the suggestion
-                if (confirmation.equals("yes")) {
-                    String completedWord = suggestions.get(0);  // Use the first suggestion for search
-                    System.out.println("Using completed word: " + completedWord);
-                    return completedWord;  // Return the corrected word
-                } else {
+                System.out.println("0. None of these");
+
+                Scanner scanner = new Scanner(System.in);
+                int choice = -1;
+
+                while (choice < 0 || choice > suggestions.size()) {
+                    System.out.print("Please select an option (0-" + suggestions.size() + "): ");
+                    try {
+                        choice = Integer.parseInt(scanner.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a number.");
+                    }
+                }
+
+                if (choice == 0) {
                     System.out.println("No changes made.");
-                    return wordToCheck;  // Return the original word if no change
+                    return "NO22"; // Return "NO22" if the user selects none
+                } else {
+                    String completedWord = suggestions.get(choice - 1);
+                    System.out.println("Using completed word: " + completedWord);
+                    return completedWord; // Return the corrected word
                 }
             } else {
                 System.out.println("No suggestions found.");
-                return wordToCheck;  // Return the original word if no suggestions
+                return "NO22"; // Return "NO22" if no suggestions
             }
         }
     }
@@ -132,8 +141,10 @@ public class SpellCheckerTRIE {
     private List<String> findSuggestionsForWord(String wordToSuggest, int maximumDistanceAllowed) {
         List<String> suggestionList = new ArrayList<>();
         traverseTrieAndSuggest(trieStructure.getRootNode(), "", wordToSuggest, maximumDistanceAllowed, suggestionList);
-        suggestionList.sort(Comparator.comparingInt(s -> calculateEditDistance(wordToSuggest, s)));  // Sort by closest match
-        return suggestionList;
+        suggestionList.sort(Comparator.comparingInt(s -> calculateEditDistance(wordToSuggest, s))); // Sort by closest match
+
+        // Limit suggestions to a maximum of 4
+        return suggestionList.size() > 4 ? suggestionList.subList(0, 4) : suggestionList;
     }
 
     private void traverseTrieAndSuggest(TrieNode1 currentNode, String currentWord, String targetWord, int maxDistance, List<String> suggestions) {

@@ -12,6 +12,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,14 +21,18 @@ import com.opencsv.CSVWriter;
 
 public class TestSelenium {
     public static void main(String[] args) throws IOException {
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\sachi\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
+//
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless"); // Run browser in headless mode
+        options.addArguments("--disable-gpu"); // Applicable for Windows, avoids GPU issues
+        options.addArguments("--no-sandbox"); // Improves stability in headless mode
+        options.addArguments("--disable-dev-shm-usage"); // Reduces memory issues in Dock
+        WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         try {
             driver.get("https://www.shaw.ca/");
-            System.out.println("Website opened");
+//            System.out.println("Website opened");
 
             // Wait for the View Plans button to be present
             WebElement viewPlansButton = wait.until(ExpectedConditions.presenceOfElementLocated(
@@ -96,7 +101,7 @@ public class TestSelenium {
                         String planPrice = card.findElement(By.className("c-price")).getText().trim();
                         String planTerm = card.findElement(By.className("c-price__term")).getText().trim();
                         String planDetails = card.findElement(By.className("c-price__details")).getText().trim();
-                        
+
                         // Check for the plan offer only if it exists
                         String planOffer = extractOptionalElementText(card, By.className("c-badge__copy"));
 
@@ -121,7 +126,7 @@ public class TestSelenium {
                 // Check if the scroll height has changed
                 long newScrollHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight;");
                 if (newScrollHeight == lastScrollHeight) {
-                    System.out.println("Reached the bottom of the page.");
+//                    System.out.println("Reached the bottom of the page.");
                     break; // Exit loop if at the bottom
                 }
                 lastScrollHeight = newScrollHeight; // Update the last scroll height
@@ -139,15 +144,29 @@ public class TestSelenium {
             // Write each plan's details without headers
             for (PlanDetails plan : planDetailsList) {
                 String[] data = {
-                    plan.name,
-                    plan.price,
-                    plan.term,
-                    plan.details,
-                    plan.offer,
-                    String.join(";", plan.features), // Join features into a single string
-                    "internet plan", // Plan type
-                    "current rogers and fido customers" // Plan sub-type
+                        plan.name,
+                        plan.price,
+                        plan.term,
+                        plan.details,
+                        plan.offer,
+                        String.join(";", plan.features), // Join features into a single string
+                        "internet plan", // Plan type
+                        "current rogers and fido customers" // Plan sub-type
                 };
+
+                // Print the details to the console
+                System.out.println("Plan Details:");
+                System.out.println("Name: " + plan.name);
+                System.out.println("Price: " + plan.price);
+                System.out.println("Term: " + plan.term);
+                System.out.println("Details: " + plan.details);
+                System.out.println("Offer: " + plan.offer);
+                System.out.println("Features: " + String.join(", ", plan.features));
+                System.out.println("Plan Type: internet plan");
+                System.out.println("Plan Sub-Type: current rogers and fido customers");
+                System.out.println("--------------------------------------------");
+
+                // Write the details to the CSV
                 writer.writeNext(data);
             }
             System.out.println("Data written to CSV file successfully.");
@@ -155,6 +174,7 @@ public class TestSelenium {
             e.printStackTrace();
         }
     }
+
 
     // Utility function to extract text from an element or return null if the element doesn't exist
     private static String extractOptionalElementText(WebElement parentElement, By by) {

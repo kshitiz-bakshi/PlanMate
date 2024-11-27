@@ -17,7 +17,7 @@ import java.util.Set;
 public class WebCrawler {
 
     private static final String SAVE_DIRECTORY = "saved_pages";
-    private static final int MAX_PAGES = 10; // Limit to avoid overloading the server
+    private static final int MAX_PAGES = 40; // Limit to avoid overloading the server
     private Set<String> visitedPages = new HashSet<>();
     private Queue<String> pagesToVisit = new LinkedList<>();
 

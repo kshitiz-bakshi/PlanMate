@@ -2,6 +2,8 @@ package Imp;
 
 import scraper.BellScraper;
 import scraper.RogersScraper;
+import scraper.Shaw.MainShaw;
+import scraper.StarlinkScraper;
 
 import java.util.Scanner;
 
@@ -39,11 +41,18 @@ public class SearchByName {
                             System.out.println("Error while scraping Rogers plans: " + e.getMessage());
                         }
                         break;
-                    case "telus":
-                        System.out.println("Scraping Telus plans...");
+                    case "Shaw":
+                        System.out.println("Scraping Shaw plans...");
                         try {
-                            // Uncomment the below line when the TelusScraper class is available
-                            // TelusScraper.main(new String[0]);  // Call TelusScraper.main() to scrape data
+                             MainShaw.main(new String[0]);
+                        } catch (Exception e) {
+                            System.out.println("Error while scraping Telus plans: " + e.getMessage());
+                        }
+                        break;
+                    case "starlink":
+                        System.out.println("Scraping Starlink plans...");
+                        try {
+                             StarlinkScraper.main(new String[0]);
                         } catch (Exception e) {
                             System.out.println("Error while scraping Telus plans: " + e.getMessage());
                         }
@@ -55,7 +64,7 @@ public class SearchByName {
                 System.out.println("Plz Enter a Valid Internet Provider Name");
             }
         } else {
-            System.out.println("No suggestions found for the input.");
+            System.out.println("Plz Enter a Valid Internet Provider Name");
         }
 
 //        scanner.close();

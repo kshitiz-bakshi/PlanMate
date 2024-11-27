@@ -13,8 +13,8 @@ import java.util.Scanner;
 public class JsonSearch {
 
     public static void main(String[] args) {
-        String jsonFilePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/output.json";
-        String vocabularyFilePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/CombinedPlans.csv";
+        String jsonFilePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/outputF.json";
+        String vocabularyFilePath = "/Users/kshitiz/Documents/ACC ProjectF/untitled/final.csv";
 
         // Initialize Word Completion and Spell Checker
         WordCompletion wordCompletion = new WordCompletion();
@@ -39,15 +39,26 @@ public class JsonSearch {
 
                 if (confirmation.equals("yes")) {
                     searchInput = completedWord.toLowerCase(); // Use the completed word for the search
-                    System.out.println("Using completed word: " + searchInput);
+//                    System.out.println("Using completed word: " + searchInput);
+                } else {
+                    // User said no to the completed word, skip further processing
+                    System.out.println("Word not accepted.");
+                    continue; // Skip the current iteration
                 }
+            } else {
+                // completedWord is null, proceed directly to spell-check
+                System.out.println("Checking word: " + searchInput);
+                List<String> suggestions = Collections.singletonList(spellChecker.checkAndSuggest(searchInput, 2));
+
+                searchInput = suggestions.get(0).toLowerCase(); // Use the first suggestion and convert to lowercase
+
+                if (searchInput.equals("no22")) { // Check for specific unwanted output
+                    System.out.println("Word not accepted.");
+                    continue; // Skip the current iteration and move to the next input
+                }
+
+                System.out.println("Using corrected word: " + searchInput);
             }
-
-            // Perform spell checking and suggest corrections if needed
-            System.out.println("Checking word: " + searchInput);
-            List<String> suggestions = Collections.singletonList(spellChecker.checkAndSuggest(searchInput, 2));
-
-            searchInput = suggestions.get(0).toLowerCase(); // Use the first suggestion and convert to lowercase
 
             try {
                 // Search the JSON file using the possibly corrected searchInput
@@ -65,7 +76,6 @@ public class JsonSearch {
 
                     if (containsWord) {
                         found = true;
-                        System.out.println("Data Block " + (i + 1) + ":");
                         displayJsonContent(dataBlock);
                         System.out.println("------------------------------------");
                     }
